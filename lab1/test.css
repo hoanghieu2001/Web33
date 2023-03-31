@@ -1,0 +1,14 @@
+h2 /* Selertor -Áp dụng thuộc tính css cho các thẻ h1*/{
+  color: red;
+  font-size: 50px;
+  line-height: 2;
+  font-weight: 600;
+}
+.nav-link{
+  color: red;
+  font-size: 20px;
+}
+/* Sử dụng combine thường để ghi đè thuộc tính css */
+a.nav-link{
+  color: gold;
+}
