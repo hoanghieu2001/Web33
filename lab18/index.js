@@ -1,17 +1,25 @@
-// tạo 1 thẻ danh sách và mỗi 1 quả tương ứng là 1 thẻ li
-// Hiển thị lên trình duyệt
-const first = document.querySelector(".first");
-const fruits = ["Apple", "Banana", "Chery"];
-//Tạo 1 thẻ danh sách và mỗi 1 quả tương ứng là 1 thẻ li
-//Và hiển thị lên trình duyệt
-const ulEl = document.createElement("ul");
-//Tạo các thẻ li trong ul
-fruits.forEach((fruits) => {
-  const liEl = document.createElement("li");
-  liEl.innerHTML = fruits;
-  ulEl.append(liEl)
-});
-document.body.prepend(ulEl)
+// // tạo 1 thẻ danh sách và mỗi 1 quả tương ứng là 1 thẻ li
+// // Hiển thị lên trình duyệt
+// const first = document.querySelector(".first");
+// const fruits = ["Apple", "Banana", "Chery"];
+// //Tạo 1 thẻ danh sách và mỗi 1 quả tương ứng là 1 thẻ li
+// //Và hiển thị lên trình duyệt
+// const ulEl = document.createElement("ul");
+// //Tạo các thẻ li trong ul
+// fruits.forEach((fruits) => {
+//   const liEl = document.createElement("li");
+//   liEl.innerHTML = fruits;
+//   ulEl.append(liEl)
+// });
+// document.body.prepend(ulEl)
+// // dùng vòng lặp foreach để duyệt qua các phần tử trong mảng
+// // tạo thẻ tương ứng với id
+// // gọi lại các phần tử id và in ra các thẻ tương ứng
+
+// const title = document.querySelector(".title");
+// document.title="hoàng văn hiệu"
+
+
 const products = [
   {
     id: 1,
@@ -280,3 +288,50 @@ const products = [
     },
   },
 ];
+
+const card = document.querySelector(".card")
+const cardInfo = document.querySelector(".card-info")
+const cardTitle= document.querySelector(".card-title");
+const cardDescription = document.querySelector(".card-description")
+
+for(let i=0; i< products.length;i++){
+  const product =products[i];
+  const newProduct = document.createElement("div");
+  // id
+  const id = document.createElement('li');
+  id.textContent=`id` +product.id;
+  newProduct.appendChild(id);
+
+  // title
+  const title =document.createElement('li')
+  title.textContent = product.title;
+  newProduct.appendChild(title); 
+  // price 
+  const price=document.createElement("li");
+  price.textContent=`price`+product.price;
+  newProduct.appendChild(price);
+  // description
+  const description =document.createElement('li');
+  description.textContent=`Description`+product.description;
+  newProduct.appendChild(description);
+
+  // category
+  const category =document.createElement("li");
+  category.textContent=`Category`+ product.category;
+  newProduct.appendChild(category);
+
+  // image
+  const image =document.createElement('img');
+  image.src=product.image;
+  newProduct.appendChild(image)
+
+  // rating
+  const rating = document.createElement("li");
+  rating.textContent= `rate`+product.rating.rate;
+  rating.textContent=`count:`+product.rating.count;  
+  newProduct.appendChild(rating);
+  
+  // newProduct.appendChild(count);
+
+  card.appendChild(newProduct);
+}
