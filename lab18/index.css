@@ -1,0 +1,23 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card {
+    width: 100px;
+
+}
+
+ */
+.item {
+    background-color: red;
+    width: 25%; 
+
+}
+
+.list {
+    display: flex;
+    width: 1140px;
+    height: auto;
+}
