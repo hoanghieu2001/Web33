@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ;
+
+        .accordion {
+            background-color: rgba(0, 0, 0, 00.2s);
+            color: #fff;
+            width: 300px;
+            height: 50px;
+            /* clear: both; */
+
+        }
+
+        .panel {
+            background-color: rgba(0, 0, 0, 00.2s);
+            color: #fff;
+            width: 300px;
+            height: 50px;
+            font-weight: 200;
+            font-size: 17px;
+            border: #fff solid 1px;
+            display: none;
+
+        }
+
+        .none {
+            display: none;
+        }
+
+        .show {
+            display: block;
+            transition: padding 0.2s;
+
+        }
+
+        button {
+            width: 200px;
+            display: flex;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button onclick="myFunction()" style="width: 300px; height: 50px;" class="accordion">Section 1</button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, quaerat?</p>
+        </div>
+
+        <button style="width: 300px; height: 50px;" class="accordion">Section 2</button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, earum!</p>
+        </div>
+
+        <button style="width: 300px; height: 50px;" class="accordion">Section 3</button>
+        <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, aspernatur!</p>
+        </div>
+    </div>
+
+    <script>
+        const accordionElement = document.querySelector(".accordion");
+        const panelElement = document.querySelector(".panel");
+        function myFunction() {
+            var accordionElement = document.querySelector(".accordion");
+            panelElement.classList.toggle("show");
+        }
+
+
+
+    </script>
+</body>
+
+</html>

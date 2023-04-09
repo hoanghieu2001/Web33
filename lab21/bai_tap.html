@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown__button {
+            background-color: green;
+            border: 0;
+            height: 40px;
+            padding: 0 20px;
+            color: #fff;
+        }
+
+        ;
+
+        .dropdown__menu {
+            background-color: #fff;
+        }
+
+        ;
+
+        .dropdown__overlay {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 100%;
+        }
+
+        ;
+
+        .dropdown__menu {
+            background-color: #fff;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            min-width: 100px;
+        }
+
+        ;
+
+        .dropdown__overlay .show {
+            display: block;
+            animation: show
+        }
+
+        .dropdown__menu__item {
+            padding: 10px 20px;
+            display: none;
+
+
+        }
+
+        ;
+
+        .dropdown__menu__item:hover {
+            background-color: darkgrey;
+        }
+
+        @keyframes show {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dropdown">
+        <button class="dropdown__button">Dropdown</button>
+        <div class="dropdown__overlay">
+            <ul class="dropdown__menu" class="show">
+                <li class="dropdown__menu__item">Click 1</li>
+                <li class="dropdown__menu__item">Click 2</li>
+                <li class="dropdown__menu__item">Click 3</li>
+            </ul>
+        </div>
+
+    </div>
+    <script src="bai_tap.js"></script>
+</body>
+
+</html>

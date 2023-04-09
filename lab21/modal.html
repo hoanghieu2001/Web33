@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" />
+
+    <title>Document</title>
+    <style>
+        .modal {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+
+        .modal__overlay {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, );
+        }
+        .modal__image{
+            width: 300px;
+            height: 200px
+        }
+        .show{
+            width: 70%;
+            height: 70%;
+            display: flex;
+            justify-content: center;
+            top: 100px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+        }
+        .close{
+            display: none;
+        }
+/* 
+        .modal__text{
+
+        } */
+
+        .modal__close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: red;
+            border: 0;
+            padding: 10px;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="modal">
+        <div class="modal__overlay">
+            <button class="modal__close">
+                <i class="bi bi-x-lg"></i>
+            </button>
+
+            <div class="modal__content">
+                <img class="modal__image"
+                    src="https://znews-photo.zingcdn.me/w660/Uploaded/ygtmvd/2023_01_04/65cbfca9ae68d99807e0eefa249c71a0.jpg"
+                    alt="Girl xinh" />
+                <p class="modal__text">Nội dung gì đó</p>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="modal">
+        <div class="modal__overlay">
+            <button class="modal__close">
+                <i class="bi bi-x-lg"></i>
+            </button>
+
+            <div class="modal__content">
+                <img class="modal__image"
+                    src="https://i.pinimg.com/originals/0c/b8/75/0cb875e5fae5d1074bc66270c7d519e6.jpg"
+                    alt="Girl xinh" />
+                <p class="modal__text">Nội dung gì đó</p>
+            </div>
+        </div>
+    </div>
+    <div class="modal">
+        <div class="modal__overlay">
+            <button class="modal__close">
+                <i class="bi bi-x-lg"></i>
+            </button>
+
+            <div class="modal__content">
+                <img class="modal__image"
+                    src="https://tiengdong.com/wp-content/uploads/www_tiengdong_com-anh-avatar-tho-bay-mau-cute-dang-yeu.jpg"
+                    alt="Girl xinh" />
+                <p class="modal__text">Nội dung gì đó</p>
+            </div>
+        </div>
+    </div>
+    <div class="modal">
+        <div class="modal__overlay">
+            <button class="modal__close">
+                <i class="bi bi-x-lg"></i>
+            </button>
+
+            <div class="modal__content">
+                <img class="modal__image" src="https://i.pinimg.com/736x/64/30/1c/64301c42f058143fbc4a313e05aa0bbe.jpg"
+                    alt="Girl xinh" />
+                <p class="modal__text">Nội dung gì đó</p>
+            </div>
+        </div>
+    </div> -->
+    <script src="modal.js">
+
+    </script>
+</body>
+
+</html>

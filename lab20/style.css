@@ -69,3 +69,35 @@ body {
     gap: 8px;
     margin: 10px 0;
 }
+.todo__delete__button{
+    width: 60px;
+    height: 25px;
+    background-color: red;
+    transition: padding 0.2s;
+    float: right;
+    text-align: center;
+    margin-top:5px ;
+}
+.todo__item{
+    width: 460px;
+    height: 40px;
+    background-color: #3f3d3d;
+    border: 1px solid;
+    margin: 2px 0;
+}
+.todo__item span{
+    font-size: 19px;
+    padding: 0 5px;
+    text-align: center;
+}
+li{
+    list-style: none;
+}
+.todo__clear__button{
+    background-color: #f43f5e;
+    width: 60px;
+    height: 40px;
+}
+.todo__checkbox{
+    margin: 10px 10px;
+}

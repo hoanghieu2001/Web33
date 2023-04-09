@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .carousel{
+            position: relative;
+
+        }
+        .carousel__button{
+            background-color: rgba(0,0,0,0.5);
+            position: absolute;
+            padding: 15px 10px;
+            font-size: 20px;
+        }
+        .carousel__button--next{
+            right: 0;
+            top: 50%;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius:10px ;
+        }
+        .carousel__button-prev{
+            left: 0;
+            top: 50%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="carousel">
+        <div class="carousel__button carousel__button--next"></div>
+        <div class="carousel__button carousel__button--prev"></div>
+
+        <div class="carousel__count"></div>
+        <div class="carousel__wrapper">
+            <div class="carousel__item">
+                <img src="" alt="" class="crousel__image">
+                <p class="carousel__text"></p>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        const buttonNextElement=document.querySelector('.carousel__button--next');
+        const buttonPrevElement =document.querySelector(".carousel__button--prev");
+        
+
+        
+    </script>
+</body>
+
+</html>
