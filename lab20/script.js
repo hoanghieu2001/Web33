@@ -46,10 +46,10 @@ function createNewtodo(title) {
 // xóa 1 công việc
 function deleteTodo(e) {
     const buttonElement = e.target;
-    const liElement = buttonElement.prentElement;
+    const liElement = buttonElement.parentElement;
     const todoID = liElement.getAttribute("todo-id");
     liElement.remove();
-    
+
     const todoIndex = todos.findIndex(function (todo) {
         return todo.id == todoID;
     });
