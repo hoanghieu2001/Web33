@@ -1,44 +1,44 @@
 // Danh sách sản phẩm
 let products = [
-    {
-        id: 1,
-        name: "Áo kiểu nữ cam đất phối cổ trắng dập ly",
-        description:
-            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, velit.",
-        price: 250000,
-        image:
-            "https://i.pinimg.com/736x/92/34/4e/92344e91859ee021a81b6c415484ee87.jpg",
-        count: 1
-    },
-    {
-        id: 2,
-        name: "Áo trắng bèo lé đen tay loe dễ thương",
-        description:
-            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, velit.",
-        price: 350000,
-        image:
-            "https://image.yes24.vn/Upload/ProductImage/anhduong201605/1914666_L.jpg?width=550&height=550",
-        count: 1
-    }
+  {
+    id: 1,
+    name: "Áo kiểu nữ cam đất phối cổ trắng dập ly",
+    description:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, velit.",
+    price: 250000,
+    image:
+      "https://i.ytimg.com/vi/Zzn9-ATB9aU/maxresdefault.jpg",
+    count: 1
+  },
+  {
+    id: 2,
+    name: "Áo trắng bèo lé đen tay loe dễ thương",
+    description:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae, velit.",
+    price: 350000,
+    image:
+      "https://image.yes24.vn/Upload/ProductImage/anhduong201605/1914666_L.jpg?width=550&height=550",
+    count: 1
+  }
 ];
 
-let promotionCode = {
-    A: 10,
-    B: 20,
-    C: 30,
-    D: 40
-};
+// let promotionCode = {
+//     A: 10,
+//     B: 20,
+//     C: 30,
+//     D: 40
+// };
 
-let currentCode;
+// let currentCode;
 
 $.each(products, function (index, product) {
-    const $product = $(`
+  const $product = $(`
   <li class="row">
     <div class="col left">
       <div class="thumbnail">
         <a href="#">
           <img src="https://i.pinimg.com/736x/92/34/4e/92344e91859ee021a81b6c415484ee87.jpg" alt="${product.image
-        }" />
+    }" />
         </a>
       </div>
       <div class="detail">
@@ -47,16 +47,16 @@ $.each(products, function (index, product) {
           ${product.description}
         </div>
         <div class="price">${product.price.toLocaleString("it-IT", {
-            style: "currency",
-            currency: "VND"
-        })}</div>
+      style: "currency",
+      currency: "VND"
+    })}</div>
       </div>
     </div>
 
     <div class="col right">
       <div class="quantity">
         <input type="number" class="quantity" step="1" value="${product.count
-        }" />
+    }" />
       </div>
 
       <div class="remove">
@@ -68,22 +68,22 @@ $.each(products, function (index, product) {
   </li>
   `);
 
-    const $quantity = $("input.quantity", $product);
-    const $remove = $(".remove", $product);
+  const $quantity = $("input.quantity", $product);
+  const $remove = $(".remove", $product);
 
-    $quantity.on("input", { $el: $quantity, product }, updateItem);
-    $remove.on("click", { $el: $product, productId: product.id }, deleteItem);
+  $quantity.on("input", { $el: $quantity, product }, updateItem);
+  $remove.on("click", { $el: $product, productId: product.id }, deleteItem);
 
-    $product.appendTo($(".products"));
+  $product.appendTo($(".products"));
 });
 
 // - Cập nhật số lượng sản phẩm hiện có trong giỏ hàng
 function updateTotalItem() {
-    const total = products.reduce(function (total, product) {
-        return (total += product.count);
-    }, 0);
+  const total = products.reduce(function (total, product) {
+    return (total += product.count);
+  }, 0);
 
-    $(".count .value").text(total);
+  $(".count .value").text(total);
 }
 
 const $callback = $.Callbacks();
@@ -91,96 +91,96 @@ const $callback = $.Callbacks();
 $callback.add(updateTotalItem);
 $callback.add(updateTotalPrice);
 
-// - Xóa sản phẩm khỏi giỏ hàng
+// // - Xóa sản phẩm khỏi giỏ hàng
 function deleteItem(e) {
-    const $el = e.data.$el;
-    const productId = e.data.productId;
+  const $el = e.data.$el;
+  const productId = e.data.productId;
 
-    $el.remove();
+  $el.remove();
 
-    const idx = products.findIndex(function (product) {
-        return product.id === productId;
-    });
+  const idx = products.findIndex(function (product) {
+    return product.id === productId;
+  });
 
-    products.splice(idx, 1);
+  products.splice(idx, 1);
 
-    $callback.fire();
+  $callback.fire();
 }
-// - Thay đổi số lượng sản phẩm
+// // - Thay đổi số lượng sản phẩm
 function updateItem(e) {
-    const $quantity = e.data.$el;
-    const count = Number($quantity.val());
-    const product = e.data.product;
+  const $quantity = e.data.$el;
+  const count = Number($quantity.val());
+  const product = e.data.product;
 
-    if (count > 0) {
-        product.count = count;
-    } else {
-        product.count = 1;
-        $quantity.val(1);
-    }
+  if (count > 0) {
+    product.count = count;
+  } else {
+    product.count = 1;
+    $quantity.val(1);
+  }
 
-    $callback.fire();
+  $callback.fire();
 }
 
 function calcSubTotal() {
-    const total = products.reduce(function (total, product) {
-        return (total += product.count * product.price);
-    }, 0);
+  const total = products.reduce(function (total, product) {
+    return (total += product.count * product.price);
+  }, 0);
 
-    return total;
+  return total;
 }
 
-// - Cập nhật tổng tiền
+// // - Cập nhật tổng tiền
 function updateTotalPrice() {
-    const subTotal = calcSubTotal();
-    const vat = subTotal * 0.05;
-    const discount = promotionCode[currentCode] || 0;
-    const total = subTotal + vat - (discount / 100) * subTotal;
+  const subTotal = calcSubTotal();
+  const vat = subTotal * 0.05;
+  const discount = promotionCode[currentCode] || 0;
+  const total = subTotal + vat - (discount / 100) * subTotal;
 
-    $(".subtotal .value").text(
-        subTotal.toLocaleString("it-IT", {
-            style: "currency",
-            currency: "VND"
-        })
-    );
+  $(".subtotal .value").text(
+    subTotal.toLocaleString("it-IT", {
+      style: "currency",
+      currency: "VND"
+    })
+  );
 
-    $(".vat .value").text(
-        vat.toLocaleString("it-IT", {
-            style: "currency",
-            currency: "VND"
-        })
-    );
+  $(".vat .value").text(
+    vat.toLocaleString("it-IT", {
+      style: "currency",
+      currency: "VND"
+    })
+  );
 
-    $(".total .value").text(
-        total.toLocaleString("it-IT", {
-            style: "currency",
-            currency: "VND"
-        })
-    );
+  $(".total .value").text(
+    total.toLocaleString("it-IT", {
+      style: "currency",
+      currency: "VND"
+    })
+  );
 }
 
-// - Áp dụng mã giảm giá
+// // - Áp dụng mã giảm giá
 
 const $promotion = $(".promotion");
 const $code = $("#promo-code", $promotion);
 const $button = $("button", $promotion);
 
 $button.on("click", function (e) {
-    const code = $code.val();
+  const code = $code.val();
 
-    if (code.toUpperCase() in promotionCode) {
-        const discount = promotionCode[code.toUpperCase()];
+  if (code.toUpperCase() in promotionCode) {
+    const discount = promotionCode[code.toUpperCase()];
 
-        currentCode = code.toUpperCase();
+    currentCode = code.toUpperCase();
 
-        const $discount = $(".discount");
-        $discount.removeClass("hide");
-        $(".value", $discount).text(`${discount}%`);
-        $callback.fire();
-        alert("Áp dụng mã giảm giá thành công");
-    } else {
-        alert("Mã giảm giá không tồn tại");
-    }
+    const $discount = $(".discount");
+    $discount.removeClass("hide");
+    $(".value", $discount).text(`${discount}%`);
+    $callback.fire();
+    alert("Áp dụng mã giảm giá thành công");
+  } else {
+    alert("Mã giảm giá không tồn tại");
+  }
 });
 
 $callback.fire();

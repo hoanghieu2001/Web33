@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dog API</title>
+    <style>
+        .random-image-wrapper span {
+            display: none;
+        }
+
+        .random-image-wrapper img {
+            display: block;
+        }
+
+        .random-image-wrapper.loading span {
+            display: block;
+        }
+
+        .random-image-wrapper.loading img {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Breeds List</h1>
+
+    <select class="breeds-list" disabled>
+        <option value="" selected disabled>Loading...</option>
+    </select>
+
+    <button class="sub-breed" disabled>Get Sub-breeds</button>
+    <button class="sub-breed-image" disabled>Get random image</button>
+
+    <div class="sub-breeds" hidden>
+        <h2>Sub breeds list of <span class="master-breed-name"></span></h2>
+
+        <ul class="sub-breeds-list"></ul>
+    </div>
+
+    <div class="breed-image" hidden>
+        <h2>Random image of <span class="master-breed-name"></span></h2>
+
+        <div class="random-image-wrapper">
+            <span>Loading</span>
+            <img src="" alt="" class="random-image" />
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
