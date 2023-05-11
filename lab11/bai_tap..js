@@ -302,7 +302,7 @@ console.log(arrToObj(arr))
 // }, {})
 // console.log(array);
 
-
+123
 // const ar = [
 //   ['Hoàng', 'Hiệu'],
 //   ['Tuổi', 18],
