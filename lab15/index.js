@@ -31,7 +31,7 @@ users.sort(function (a, b) {
   return a.age - b.age;
 });
 console.log(users);
-
+//1234
 // findInDex là một phương thức được cung cấp trong mảng( Array)
 // Để tìm kiếm giá trị đầu tiên có thỏa mãn điều kiện để trả về giá trị True
 // trong đó callback là một hàm được gọi với các tham số sau:
@@ -117,6 +117,6 @@ arr.forEach(function (n) {
   console.log(n * 9);
 });
 
-for(let i =0 ;i<10;i++){
+for (let i = 0; i < 10; i++) {
   return i;
 }
