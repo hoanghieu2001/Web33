@@ -306,7 +306,7 @@ console.log(arrToObj(arr))
 // const ar = [
 //   ['Hoàng', 'Hiệu'],
 //   ['Tuổi', 18],
-// ];
+// ];    
 // const mang = ar.reduce((a, b) => {
 //   a[b[0]] = b[1];
 //   return a
@@ -343,14 +343,14 @@ console.log(arrToObj(arr))
 //   return outPut
 // }
 
-Array.prototype.forEach2=(function(callback){
-  for(let index in this){
-    console.log('index',index);
+Array.prototype.forEach2 = (function (callback) {
+  for (let index in this) {
+    console.log('index', index);
   }
 })
-const couses=[
-  'javascript','php','ruby'
+const couses = [
+  'javascript', 'php', 'ruby'
 ];
-couses.forEach2(function(couse,index,array){
-  console.log(couse,index,array);
+couses.forEach2(function (couse, index, array) {
+  console.log(couse, index, array);
 })
