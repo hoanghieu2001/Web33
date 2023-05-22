@@ -1,0 +1,19 @@
+<!-- bindding -->
+<!-- {{name}}
+
+<p>{{ user.name}}</p>
+<p> {{user.age}}</p>
+
+<input type="text" [value]="user.name">
+<button type="button"(click)="handler()">Click me</button>
+<input type="text" [ngModel]="name" (ngModelChange)="name=$event"> -->
+<!-- Cách viết rút gọn -->
+<!-- <input type="text"[(ngModel)]="name"> -->
+
+<!-- <hello *ngIf="user.age>=18" [name]="user.name></hello> -->
+<div *ngIf=" user.age<18">
+  KHông được xem phim
+  </div>
+  <button (click)="user.age=user.age-1">-</button>
+  Age: {{user.age}}
+  <button (click)="user.age=user.age+1">+</button>
