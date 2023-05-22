@@ -1,0 +1,46 @@
+<p>Chào em anh đứng đây từ chiều</p>
+<!-- for (let something of user)
+-index: số thứ tự của hiện tại
+-count: độ  dàicủa mảng array
+-first: true nếu như item đó là item đầu tiên của mảng array
+-last true nếu như item đó là item đầu tiên của mảng aray
+-even:true nếu như item đó là item chẵn của mảng array
+-odd: true nếu như item đí là item chẵn của mảng array-->
+<!-- <ul>
+  <li *ngFor="index as idx">{{u.id}} - {{u.firstName}} - {{u.lastName}}- {{u.email}}</li>
+</ul> -->
+
+<!-- <ng-container></ng-container> -->
+<!-- <ul>
+  <li *ngFor="let u of users; index as idx; count as total;first as First;last as isLast;even as isEven;odd as isOdd">
+  </li>
+  <span>{{u.id}} - {{u.firstName}} - {{u.lastName}}</span>
+  <br>
+  <span>at index{{idx}} out of {{total}}</span>
+  <span *ngIf="isEven">I am study</span>
+  <br>
+  <span *ngIf="isLast">I am last</span><br>
+  <span *ngIf="isFirst">I am first</span>
+  <br>
+</ul>
+<button **ngFor="let tag of tags;last as isLast" [class.right-margin]="!isLast">{{tag}}</button> -->
+
+
+<ul>
+  <!-- ngFor let-u [ngForOf]  ngFor là vòng lặp for let-u khai báo u đại diện cho các phần tử trong mảng, ngForOf là chỉ vào mảng mà muốn lặp -->
+  <ng-template ngFor let-u [ngForOf]="users" let-idx="index" let-count="count" let-first="first" let-last="last"
+    let-even="even" let-odd="odd">
+    <li>
+      <span>{{u.id}} - {{u.firstName}} - {{u.lastName}} -{{u.age}}tuổi</span>
+      <br>
+      <span>at index {{idx}} out of {{count}}</span>
+      <span *ngIf="even">I am study</span>
+      <br>
+      <span *ngIf="last">I am last</span><br>
+      <span *ngIf="first">I am first</span>
+      <br>
+    </li>
+  </ng-template>
+  <!--template là một Directive dùng để tạo một template hoặc một khối mã HTML có thể được sử dụng lại. Nó cho phép bạn định
+    nghĩa một template mà không hiển thị nó trực tiếp trên giao diện người dùng, mà chỉ sử dụng nó trong các cấu trúc điều khiển -->
+</ul>

@@ -1,0 +1,6 @@
+<hello *ngIf="user.age>=18" [name]="user.name"></hello>
+<div *ngIf="user.age < 18">
+  Chưa phải đi tù
+</div>
+<button (click)="user.age =user.age-1">-</button>
+<button (click)="user.age =user.age+1">+</button>

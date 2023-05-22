@@ -1,0 +1,24 @@
+{{name}}
+<p>Chào Cậu</p>
+<button (click)="isDanger = !isDanger">Danger</button><br>
+<button (click)="isWarning = !isWarning">Warning</button>
+<!--
+  - [class.ten-class]
+  - [class]="array"
+  - [class]="object" {[ten-class:string:bolean]}
+  - [class]="variabale"
+ -->
+<!-- <div [class] = "classes"></div> -->
+<!--
+  - [style.tenStyle]
+  - [style.ten-style]
+  - [style.tenStyle.unit]
+  - [style]="object"
+  - [style.css-variable]
+  -->
+<div class="box" [class.red-border]="isDanger" [class.yellow-background]="isWarning"></div>
+
+<p [style.--text-color]="isDanger ? 'red' : 'blue'"
+  [style]="{ color: 'var(--text-color)', backgroundColor: 'yellow', fontSize: '2rem' }">
+  chạy đi nào đừng bị bug nữa
+</p>
