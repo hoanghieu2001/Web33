@@ -10,7 +10,7 @@
  -->
 <!-- <div [class] = "classes"></div> -->
 <!--
-  - [style.tenStyle]
+  - [style.tenStyle]ng add @angular/material
   - [style.ten-style]
   - [style.tenStyle.unit]
   - [style]="object"
@@ -22,3 +22,11 @@
   [style]="{ color: 'var(--text-color)', backgroundColor: 'yellow', fontSize: '2rem' }">
   chạy đi nào đừng bị bug nữa
 </p>
+
+<p [style.--text-color]="isDanger ? 'red':'blue'" [style]="{color: 'var(--text-color)'}">Xin đấy đừng bug nữa</p>
+
+<li [style.--text-color]="isDanger ?'red':'blue'" [style]="{color:'var(--text-color)'}">{{users.name}}</li>
+<li [style.--text-color]="isDanger ?'red':'blue'" [style.--text-color]="isWarning? 'pink':'red'"
+  style="list-style: none;" [style]="{color:'var(--text-color)'}">{{users.age}}</li>
+
+<mat-slide-toggle>Toggle me!</mat-slide-toggle>

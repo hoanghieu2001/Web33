@@ -1,0 +1,7 @@
+<p>Chào em cô gái mới quen</p>
+<button (click)="currentProgress=currentProgress+1">Tăng 1 phần tử</button>
+<button (click)="currentProgress =currentProgress -1">Giảm 1 phần tử</button>
+<!-- <progress-bar></progress-bar> -->
+<br>
+<progress-bar [progress]="70"></progress-bar>
+<progress-bar [progress]="currentProgress" [progressColor]="'dodgerblue'"></progress-bar>

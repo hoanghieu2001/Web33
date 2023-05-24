@@ -190,16 +190,16 @@ console.log(result3);
 // nếu là true thêm vòa mảng kết quả
 const result33 = arr3.filter(isEven);
 console.log(result33);
-const arr4 = [1,2,3,4,5];
+const arr4 = [1, 2, 3, 4, 5];
 // tôi muốn biến đổi tất cả só trong mảng thành x2 lần giá trị lên
 // [ 2,4,6,8,10]
-function double(n){
-  return n*2
+function double(n) {
+  return n * 2
 }
 // tạo mảng chứa kết quả
-let result4 =[];
+let result4 = [];
 // DUyệt qua từng phần tử trong phần tử'
-for (let n of arr4){
+for (let n of arr4) {
   // với mỗi phần tử thì x2 lên
   let temp = double(n);
   // Thêm vào mảng kết quả
