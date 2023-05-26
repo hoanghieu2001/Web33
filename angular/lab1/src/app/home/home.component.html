@@ -3,4 +3,58 @@
   <p>Anh đứng đây từ sáng</p>
   <p>home works!</p>
   <p>Anh đứng đây từ sáng</p>
+  <!-- <input value="{{ users.name}}"> -->
+  <!-- <input  value="name"title="Đây là {{users.name}}"> -->
+  <!-- <input type="text"[(ngModel)]="users.name"> -->
+  <!-- <input type="text" [(ngModel)]="users.age" [value]="users.name" [title]="'Đây là ' + users.name"> -->
+  <!-- <h2 *ngIf="users.age<18">Chưa phải đi tù</h2>
+  <h2 *ngIf="users.age>=18">Đi tù</h2> -->
+  <input type="text" [(ngModel)]="users.age">
+  <h3>{{users.name}}</h3>
+  <div *ngIf="users.age<18;then tre; else gia"></div>
+  <ng-template #tre>
+    <h2>Chưa phải đi tù</h2>
+  </ng-template>
+  <ng-template #gia>
+    <h2>Đi tù</h2>
+  </ng-template> <br>
+  <button (click)="resetName()">Đi tù hông bé ơi</button>
+  <div *ngFor="let i of frust; let u = index">
+    <li>{{u}} {{i.ten}}</li>
+  </div>
+
+
+  <!-- <table style="width:100%">
+    <tr>
+      <th>Thứ tự</th>
+      <th>Tên trái cây</th>
+      <th>Giá</th>
+      <th>Đang hạ giá</th>
+    </tr>
+
+    <tr *ngFor="let i of frust; let u = index">
+      <td>{{u}}</td>
+      <td>{{i.ten}}</td>
+      <td class="right">
+        <span [ngClass]="{'so-am': i.gia < 0}">{{i.gia|currency}}</span>
+        currency là tên của tiền tệ
+      </td>
+      <td>
+        <span *ngIf="i.haGia">Đang hạ giá</span>
+        <span >{{i.haGia | onsale|uppercase}}</span>
+      </td>
+    </tr>
+  </table>
+ -->
+
+  <label for="cars">City</label>
+  <select id="city">
+    <option value="" *ngFor="let data of vietnamData">{{data.city}}</option>
+  </select>
+  <br><br>
+  Quận / Huyện
+  <select id="district">
+    <option value="volvo">orange</option>
+  </select>
+
 </div>
