@@ -88,9 +88,13 @@ export class HomeComponent {
   }
 
   public changeCity(event: any): void {
+    debugger;
     const city = event.target.value;
-    if (!city) {
-      return;
+    const search = this.vietnamData.filter((data) => data.city === city);
+    console.log(search);
+
+    if (search && search.length > 0) {
+      this.districts = search[0].district;
     }
   }
 }

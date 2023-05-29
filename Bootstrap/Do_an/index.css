@@ -6,20 +6,43 @@
 
 nav {
     background-color: #696464;
-    height: 80px;
+    height: 48px;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+
+.nav-underline .nav-link {
+    font-size: 1.3rem;
+}
+
+a.nav-link {
+    color: aliceblue;
+}
+
+a.nav-link.active {
+    color: aliceblue;
+    font-size: 1.3rem;
 }
 
 .container {
-    
+    width: 1920px;
+    margin: auto;
 }
-.banner img{
-    height: 100vh;
+
+.banner img {
+    height: 90vh;
     width: 100%;
     margin-left: 0;
     margin-right: 0;
 }
 
- .sale3 img{
-    width: 400px;
-    
+
+i.bi.bi-cart-plus {
+    font-size: 30px;
+    display: none;
+}
+
+.series:hover i.bi.bi-cart-plus {
+    display: block;
 }

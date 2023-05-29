@@ -8,42 +8,157 @@
     <link rel="stylesheet" href="./index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+
     <title>Document</title>
 
 </head>
 
 <body>
     <div id="main">
-        <nav>
-
+        
+        <nav class="nav-header">
+            <div class="container">
+            <ul class="nav nav-underline">
+                <li class="nav-item ">
+                    <a class="nav-link active" aria-current="page" href="#">Snake Store</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sản phẩm</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Tin tức</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cừa hàng</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Liên hệ</a>
+                </li>
+               
+                
+            </ul>
+        </div>
         </nav>
+
         <div class="container">
             <div class="banner">
                 <img src="./image/d8365491cc713cd35475b1bc17d7dd09.png" alt="">
             </div>
-            <form action="">
-                <div class="saler row">
-                    <div class="saler1 col-5">
-                        <img src="./image/sale1.png" alt=""  width="460px"height="750px">
-                    </div>
-                    <div class=" saler2 col-7 column">
-                            <div class="sale1 ">
-                                fdsf
-                            </div>
-                            <div class="sale2">
-                                <div class="col-4 sale3">
-                                    <img src="./image/sale2.png" alt="">
-                                </div>
-                                <div class="col-4 sale3">
-                                    <img src="./image/sale4.png" alt="">
-                                </div>
-                            </div>
-                    </div>  
 
+            <div class="row">
+                <div class="col-12 col-lg-12 col-xl-12">
+                    <section class="section section-movies">
+                        <div class="section-header">
+                            <ul class="nav nav-pills" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="new-updated-series-tab" data-bs-toggle="tab"
+                                        data-bs-target="#new-updated-series" type="button" role="tab"
+                                        aria-controls="new-updated-series" aria-selected="true">
+                                        Sản phẩm mới về
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="new-movie-tab" data-bs-toggle="tab"
+                                        data-bs-target="#new-movie-updated" type="button" role="tab"
+                                        aria-controls="new-movie-updated" aria-selected="false">
+                                        Sản phẩm đang sale
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="finished-movies-tab" data-bs-toggle="tab"
+                                        data-bs-target="#finished-movies" type="button" role="tab"
+                                        aria-controls="finished-movies" aria-selected="false">
+                                        Sản phẩm mùa hè
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="section-content">
+                            <div class="tab-content">
+                                <div id="new-updated-series" class="tab-pane fade show active new-updated-series">
+                                    <div class="row g-2">
+                                        <div class="col-4 col-xxl-3 mt-2">
+                                            <article class="series position-relative p-10">
+                                                <a href="" class="series-link d-block">
+                                                    <img class="series-poster mw-100" src="./image/sale1.png" alt="" />
+                                                    <span
+                                                        class="series-episode position-absolute top-0 start-0 bg-success text-light rounded-end-2 fs-6 p-1 shadow-sm">Sản
+                                                        phẩm mới về</span>
+                                                    <h3
+                                                        class="series-title position-absolute bottom-0 start-0 end-0 fs-6 bg-dark text-light m-0 p-1 text-center">
+                                                        Bộ đầm xanh 01
+                                                    </h3>
+                                                    <button
+                                                        class="series-cart position-absolute top-50 start-50  translate-middle rounded-circle border-0">
+                                                        <i class="bi bi-cart-plus "></i>
+                                                    </button>
+                                                </a>
+                                            </article>
+                                        </div>
+                                        <div class="col-4 col-xxl-3 mt-2">
+                                            <article class="series position-relative p-10">
+                                                <a href="" class="series-link d-block">
+                                                    <img class="series-poster mw-100" src="./image/sale1.png" alt="" />
+                                                    <span
+                                                        class="series-episode position-absolute top-0 start-0 bg-success text-light rounded-end-2 fs-6 p-1 shadow-sm">Sản
+                                                        phẩm mới về</span>
+                                                    <h3
+                                                        class="series-title position-absolute bottom-0 start-0 end-0 fs-6 bg-dark text-light m-0 p-1 text-center">
+                                                        Bộ đầm xanh 01
+                                                    </h3>
+                                                    <button
+                                                        class="series-cart position-absolute top-50 start-50  translate-middle rounded-circle border-0">
+                                                        <i class="bi bi-cart-plus "></i>
+                                                    </button>
+                                                </a>
+                                            </article>
+                                        </div>
+                                        <div class="col-4 col-xxl-3 mt-2">
+                                            <article class="series position-relative p-10">
+                                                <a href="" class="series-link d-block">
+                                                    <img class="series-poster mw-100" src="./image/sale1.png" alt="" />
+                                                    <span
+                                                        class="series-episode position-absolute top-0 start-0 bg-success text-light rounded-end-2 fs-6 p-1 shadow-sm">Sản
+                                                        phẩm mới về</span>
+                                                    <h3
+                                                        class="series-title position-absolute bottom-0 start-0 end-0 fs-6 bg-dark text-light m-0 p-1 text-center">
+                                                        Bộ đầm xanh 01
+                                                    </h3>
+                                                    <button
+                                                        class="series-cart position-absolute top-50 start-50  translate-middle rounded-circle border-0">
+                                                        <i class="bi bi-cart-plus "></i>
+                                                    </button>
+                                                </a>
+                                            </article>
+                                        </div>
+                                        <div class="col-4 col-xxl-3 mt-2">
+                                            <article class="series position-relative p-10">
+                                                <a href="" class="series-link d-block">
+                                                    <img class="series-poster mw-100" src="./image/sale1.png" alt="" />
+                                                    <span
+                                                        class="series-episode position-absolute top-0 start-0 bg-success text-light rounded-end-2 fs-6 p-1 shadow-sm">Sản
+                                                        phẩm mới về</span>
+                                                    <h3
+                                                        class="series-title position-absolute bottom-0 start-0 end-0 fs-6 bg-dark text-light m-0 p-1 text-center">
+                                                        Bộ đầm xanh 01
+                                                    </h3>
+                                                    <button
+                                                        class="series-cart position-absolute top-50 start-50  translate-middle rounded-circle border-0">
+                                                        <i class="bi bi-cart-plus "></i>
+                                                    </button>
+                                                </a>
+                                            </article>
+                                        </div>
+
+                                        
+                                    </div>
+                                </div>
+                    </section>
                 </div>
-
-            </form>
+            </div>
         </div>
+    </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"

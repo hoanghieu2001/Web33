@@ -1,1 +1,18 @@
-<p>about works!</p>
+<!-- <p>about works!</p> -->
+<h3 appHighLight style="width: 200px;">Xã hội này không làm mà đòi có ăn</h3>
+<p [appHighLight]="'orange'">Xã hội này không làm mà đòi có ăn</p>
+<p [appHighLight]="myColor">Xã hội này không làm mà đòi có ăn</p>
+<h3>Thì chỉ có ăn Đồng Bằng ăn cut thôi</h3>
+<h3>Huấn Hoa Hòe</h3>
+<ul [ngSwitch]="loginName">
+  <li *ngSwitchCase="'user'">
+    <p>User is logger in...</p>
+  </li>
+  <li *ngSwitchCase="'admin'">
+    <a routerLink="/about" routerLinkActive="active"> About-component</a>
+    <app-home></app-home>
+    </li>
+  <li *ngSwitchDefault>
+    <p>Please choose login name</p>
+  </li>
+</ul>

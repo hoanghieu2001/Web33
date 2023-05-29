@@ -13,18 +13,18 @@
   <h3>{{users.name}}</h3>
   <div *ngIf="users.age<18;then tre; else gia"></div>
   <ng-template #tre>
-    <h2>Chưa phải đi tù</h2>
+    <h2>Cưới vợ</h2>
   </ng-template>
   <ng-template #gia>
-    <h2>Đi tù</h2>
+    <h2>Cưới 10 em</h2>
   </ng-template> <br>
-  <button (click)="resetName()">Đi tù hông bé ơi</button>
+  <button (click)="resetName()">Lấy vợ đi</button>
   <div *ngFor="let i of frust; let u = index">
     <li>{{u}} {{i.ten}}</li>
   </div>
 
 
-  <!-- <table style="width:100%">
+  <table style="width:100%">
     <tr>
       <th>Thứ tự</th>
       <th>Tên trái cây</th>
@@ -37,24 +37,27 @@
       <td>{{i.ten}}</td>
       <td class="right">
         <span [ngClass]="{'so-am': i.gia < 0}">{{i.gia|currency}}</span>
-        currency là tên của tiền tệ
+        <!-- currency là tên của tiền tệ -->
       </td>
       <td>
-        <span *ngIf="i.haGia">Đang hạ giá</span>
+        <!-- <span *ngIf="i.haGia">Đang hạ giá</span> -->
         <span >{{i.haGia | onsale|uppercase}}</span>
       </td>
     </tr>
   </table>
- -->
 
-  <label for="cars">City</label>
-  <select id="city">
-    <option value="" *ngFor="let data of vietnamData">{{data.city}}</option>
+
+  Tỉnh / Thành Phố:
+  <select id="city" (change)="changeCity($event)">
+    <option *ngFor="let data of vietnamData" value="{{ data.city }}">
+      {{ data.city }}
+    </option>
   </select>
-  <br><br>
-  Quận / Huyện
+  <br />
+  Quận / Huyện:
   <select id="district">
-    <option value="volvo">orange</option>
+    <option *ngFor="let district of districts" value="{{ district }}">
+      {{ district }}
+    </option>
   </select>
-
 </div>
