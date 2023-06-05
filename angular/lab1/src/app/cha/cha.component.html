@@ -1,0 +1,9 @@
+Đây là component Cha:
+<br />
+<p>{{ chaMessage }}</p>
+<br />
+<button (click)="choTien()">cho con tiền</button>
+<br />
+<app-con #thangTeo name="Tèo" (conGoi)="conGoi($event)"></app-con>
+<br />
+<app-con #thangTi name="Tí" (conGoi)="conGoi($event)"></app-con>
